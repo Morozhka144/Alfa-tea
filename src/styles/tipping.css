@@ -1,0 +1,82 @@
+::-webkit-scrollbar { display: none; }
+        * { -webkit-tap-highlight-color: transparent; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+        }
+
+        .tip-chip {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            transition: all 0.2s ease;
+        }
+
+        .tip-chip.active {
+            background: #333d7b;
+            border-color: #333d7b;
+            color: #fff;
+        }
+
+        .tip-chip:not(.active):hover {
+            background: rgba(255, 255, 255, 0.30);
+        }
+
+        .amount-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid rgba(255,255,255,0.4);
+            outline: none;
+            color: #fbfbfb;
+            width: 100%;
+            caret-color: #e84c3d;
+        }
+
+        .amount-input::placeholder {
+            color: rgba(251,251,251,0.4);
+        }
+
+        .amount-input:focus {
+            border-bottom-color: rgba(255,255,255,0.85);
+        }
+
+        .primary-btn {
+            background: linear-gradient(135deg, #e84c3d 0%, #c93326 100%);
+            box-shadow: 0 8px 24px rgba(232,76,61,0.45), 0 2px 8px rgba(232,76,61,0.25);
+            transition: all 0.2s ease;
+        }
+
+        .primary-btn:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 14px rgba(232,76,61,0.4);
+        }
+
+        .rating-star {
+            transition: transform 0.15s ease;
+        }
+        .rating-star:active {
+            transform: scale(1.2);
+        }
+
+        .success-badge {
+            background: rgba(89,188,146,0.2);
+            border: 1px solid rgba(89,188,146,0.4);
+        }
+
+        .avatar-ring {
+            background: linear-gradient(135deg, #e84c3d, #333d7b);
+            padding: 2.5px;
+            border-radius: 9999px;
+        }
+
+        .scroll-snap-x {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .snap-start {
+            scroll-snap-align: start;
+        }
