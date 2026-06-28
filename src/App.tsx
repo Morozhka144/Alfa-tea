@@ -8,12 +8,14 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const baseUrl = (import.meta as any).env?.BASE_URL || "/";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter basename={baseUrl}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />
